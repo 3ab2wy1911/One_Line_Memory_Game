@@ -1,7 +1,7 @@
 '''
 Subject: One Line Memory Game using python . "version 1"
 Author: Mohamed Ahmed Abd Elquawy Abd Elghani .
-Date : 4/3/2022. "Last edited"
+Date : 30/5/2022. "Last modification"
 '''
 import random
 matches1=['A','B','C','D','E','F','G','H','I','J']
@@ -25,8 +25,10 @@ while(user_matches!=['*','*','*','*','*','*','*','*','*','*','*','*','*','*','*'
         while(in1 not in user_matches): #Prevent the player from entering a wrong input.
             in1=float(input("Wrong choice!!! Please Enter a frist number from the list above \n"))
         in2=float(input("Please Enter a second number from the list above \n")) 
-        while (in2 not in user_matches): #Prevent the player from entering a wrong input.
+        while (in2 not in user_matches): #Prevent the player from entering a wrong
             in2=float(input("Wrong choice!!! Please Enter a second number from the list above \n"))
+        while(in1==in2): #Prevent the player from entering the same input.
+            in2=float(input("Wrong choice!!! Please enter a different number \n"))
         user_matches[int(in1)-1]=matches[int(in1)-1] 
         user_matches[int(in2)-1]=matches[int(in2)-1] 
         #Replacing the player's choices with thier corspondings in the other list.
@@ -49,7 +51,9 @@ while(user_matches!=['*','*','*','*','*','*','*','*','*','*','*','*','*','*','*'
             in3=float(input("Wrong choice!!! Please Enter a frist number from the list above \n"))  
         in4=float(input("Enter a second number from the list above \n"))
         while(in4 not in user_matches): #Prevent the player from entering a wrong input.
-            in4=float(input("Wrong choice!!! Please Enter a second number from the list above \n"))  
+            in4=float(input("Wrong choice!!! Please Enter a second number from the list above \n"))
+        while(in4==in3): #Prevent the player from entering the same input.
+            in4=float(input("Wrong choice!!! Please enter a different number \n"))
         user_matches[int(in3)-1]=matches[int(in3)-1]
         user_matches[int(in4)-1]=matches[int(in4)-1]
         #Replacing the player's choices with thier corspondings in the other list.
